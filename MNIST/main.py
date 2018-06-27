@@ -1,18 +1,19 @@
 from __future__ import print_function
 import argparse
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
+import torch.nn as nn                                                   # Import neural net rep
+import torch.nn.functional as F                                         
+import torch.optim as optim                                             # Import optimizer
 import os
 import sys
 import models
 import util
 from torchvision import datasets, transforms
-from torch.autograd import Variable
+from torch.autograd import Variable                                     # Import Autograd
 
 import util
 
+# Save Model
 def save_state(model, acc):
     print('==> Saving model ...')
     state = {
