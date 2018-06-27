@@ -26,6 +26,7 @@ def save_state(model, acc):
                     state['state_dict'].pop(key)
     torch.save(state, 'models/'+args.arch+'.best.pth.tar')
 
+# Training model
 def train(epoch):
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
